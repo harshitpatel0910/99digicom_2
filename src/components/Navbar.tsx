@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#1F1F1F] border-b border-[#3D3A7D] sticky top-0 z-50">
+    <nav className="bg-white/20 backdrop-blur-md border-b border-white/30 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -36,16 +36,16 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 text-sm font-medium transition-colors hover:text-[#10FFAB] ${
+                className={`px-3 py-2 text-sm font-medium transition-colors hover:text-[#3B82F6] ${
                   location.pathname === item.path
-                    ? "text-[#10FFAB] border-b-2 border-[#10FFAB]"
-                    : "text-[#F7F7F7]"
+                    ? "text-[#3B82F6] border-b-2 border-[#3B82F6]"
+                    : "text-[#1F1F1F]"
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-gradient-to-r from-[#3B82F6] to-[#A259FF] hover:from-[#A259FF] hover:to-[#3B82F6] text-white">
+            <Button className="bg-gradient-to-r from-[#3B82F6] to-[#A259FF] hover:from-[#A259FF] hover:to-[#3B82F6] text-white backdrop-blur-sm">
               Find Your Perfect Partner
             </Button>
           </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#F7F7F7] hover:text-[#10FFAB] focus:outline-none"
+              className="text-[#1F1F1F] hover:text-[#3B82F6] focus:outline-none"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -70,13 +70,13 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#1F1F1F] border-t border-[#3D3A7D]">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/20 backdrop-blur-md border-t border-white/30">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-[#10FFAB] ${
-                    location.pathname === item.path ? "text-[#10FFAB]" : "text-[#F7F7F7]"
+                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-[#3B82F6] ${
+                    location.pathname === item.path ? "text-[#3B82F6]" : "text-[#1F1F1F]"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
