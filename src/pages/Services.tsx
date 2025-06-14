@@ -80,17 +80,20 @@ const Services = () => {
   return (
     <div className="min-h-screen py-12">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-[#1F1F1F] via-[#3D3A7D] to-[#1F1F1F]">
+      <section className="py-16 bg-gradient-to-br from-[#3B82F6]/10 via-white to-[#A259FF]/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-[#F7F7F7]">Our</span>{" "}
+            <span className="text-[#1F1F1F]">Our</span>{" "}
             <span className="bg-gradient-to-r from-[#3B82F6] to-[#A259FF] bg-clip-text text-transparent">
               Services
             </span>
           </h1>
-          <p className="text-xl text-[#F7F7F7] opacity-90">
+          <p className="text-xl text-[#1F1F1F] opacity-80 mb-8">
             Comprehensive solutions across four key domains to accelerate your business growth.
           </p>
+          <Button className="bg-gradient-to-r from-[#3B82F6] to-[#A259FF] hover:from-[#A259FF] hover:to-[#3B82F6] text-white font-semibold px-8 py-3 text-lg">
+            Explore Services
+          </Button>
         </div>
       </section>
 
@@ -99,25 +102,25 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             {services.map((service, index) => (
-              <Card key={index} className="bg-[#1F1F1F] border-[#3D3A7D] overflow-hidden">
+              <Card key={index} className="bg-white/60 backdrop-blur-md border-white/30 shadow-lg overflow-hidden">
                 <CardHeader className="relative">
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-5`}></div>
                   <div className="relative">
                     <div className={`h-1 w-full bg-gradient-to-r ${service.color} mb-4`}></div>
-                    <CardTitle className="text-2xl md:text-3xl text-[#F7F7F7] mb-2">
+                    <CardTitle className="text-2xl md:text-3xl text-[#1F1F1F] mb-2">
                       {service.domain}
                     </CardTitle>
-                    <p className="text-[#10FFAB] font-medium">{service.website}</p>
+                    <p className="text-[#10FFAB] font-medium text-lg">{service.website}</p>
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Services */}
                     <div>
-                      <h3 className="text-xl font-semibold text-[#F7F7F7] mb-4">Services Offered</h3>
+                      <h3 className="text-xl font-semibold text-[#1F1F1F] mb-4">Services Offered</h3>
                       <ul className="space-y-2">
                         {service.services.map((item, idx) => (
-                          <li key={idx} className="flex items-center text-[#F7F7F7]">
+                          <li key={idx} className="flex items-center text-[#1F1F1F]">
                             <span className="w-2 h-2 bg-[#10FFAB] rounded-full mr-3"></span>
                             {item}
                           </li>
@@ -127,16 +130,21 @@ const Services = () => {
 
                     {/* Partners */}
                     <div>
-                      <h3 className="text-xl font-semibold text-[#F7F7F7] mb-4">Key Partners</h3>
+                      <h3 className="text-xl font-semibold text-[#1F1F1F] mb-4">Key Partners</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {service.partners.map((partner, idx) => (
-                          <div key={idx} className="p-3 bg-[#2A2A2A] rounded-lg border border-[#3D3A7D] hover:border-[#10FFAB] transition-colors">
-                            <h4 className="font-semibold text-[#F7F7F7] text-sm mb-1">{partner.name}</h4>
-                            <p className="text-xs text-[#F7F7F7] opacity-70">{partner.description}</p>
+                          <div key={idx} className="p-3 bg-white/80 backdrop-blur-sm rounded-lg border border-white/50 hover:border-[#10FFAB] transition-colors">
+                            <h4 className="font-semibold text-[#1F1F1F] text-sm mb-1">{partner.name}</h4>
+                            <p className="text-xs text-[#1F1F1F] opacity-70">{partner.description}</p>
                           </div>
                         ))}
                       </div>
                     </div>
+                  </div>
+                  <div className="mt-6 flex justify-center">
+                    <Button variant="outline" className="border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white">
+                      Learn More
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -146,8 +154,9 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#3B82F6] via-[#A259FF] to-[#10FFAB]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-gradient-to-r from-[#3B82F6] via-[#A259FF] to-[#10FFAB] relative">
+        <div className="absolute inset-0 backdrop-blur-sm"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -156,12 +165,12 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/join-us">
-              <Button size="lg" className="bg-white text-[#3B82F6] hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
+              <Button size="lg" className="bg-white text-[#3B82F6] hover:bg-[#F7F7F7] hover:text-[#1F1F1F] px-8 py-4 text-lg font-semibold">
                 Apply for Partnership
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#3B82F6] px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#3B82F6] px-8 py-4 text-lg font-semibold">
                 Get Consultation
               </Button>
             </Link>

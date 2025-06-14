@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-white/10 backdrop-blur-md border-t border-white/30 mt-20">
+    <footer className="bg-white/60 backdrop-blur-md border-t border-white/30 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="text-2xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#A259FF] bg-clip-text text-transparent">
               99Partners
             </div>
-            <p className="text-[#1F1F1F] text-sm">
+            <p className="text-[#1F1F1F] text-sm font-medium">
               Empowering Ecosystems, Accelerating Growth
             </p>
             <div className="flex space-x-4">
@@ -35,34 +35,34 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-[#3B82F6] mb-4">Domains</h3>
             <ul className="space-y-2">
-              <li><Link to="/domains" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">Digital Commerce</Link></li>
-              <li><Link to="/domains" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">IT & Marketing</Link></li>
-              <li><Link to="/domains" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">Financial Services</Link></li>
-              <li><Link to="/domains" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">Spiritual Ecosystem</Link></li>
+              <li><Link to="/domains" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">Digital Commerce</Link></li>
+              <li><Link to="/domains" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">IT & Marketing</Link></li>
+              <li><Link to="/domains" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">Financial Services</Link></li>
+              <li><Link to="/domains" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">Spiritual Ecosystem</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold text-[#3B82F6] mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">Services</Link></li>
-              <li><Link to="/partners" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">Partners</Link></li>
-              <li><Link to="/blog" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">Blog</Link></li>
+              <li><Link to="/about" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">About Us</Link></li>
+              <li><Link to="/services" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">Services</Link></li>
+              <li><Link to="/partners" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">Partners</Link></li>
+              <li><Link to="/blog" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">Blog</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold text-[#3B82F6] mb-4">Get Started</h3>
             <ul className="space-y-2">
-              <li><Link to="/join-us" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">Join Us</Link></li>
-              <li><Link to="/contact" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors">Contact</Link></li>
+              <li><Link to="/join-us" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">Join Us</Link></li>
+              <li><Link to="/contact" className="text-[#1F1F1F] hover:text-[#3B82F6] transition-colors font-medium">Contact</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/30 text-center">
-          <p className="text-[#1F1F1F] text-sm">
+          <p className="text-[#1F1F1F] text-sm font-medium">
             © 2024 99Partners. All rights reserved. Empowering Ecosystems, Accelerating Growth.
           </p>
         </div>
